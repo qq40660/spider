@@ -23,5 +23,6 @@ def spider():
       print num,
       num+=1
 
-spider()
+if '__name__' == '__main__':
+  spider()
 
