@@ -18,10 +18,10 @@ def spider():
     soup    = BeautifulSoup(content,fromEncoding='utf-8')
     pic_list= soup.findAll('img')
     for i in pic_list[1::]:
-      pic_url=i['src'][:-6]+'.jpg'
+      pic_url = i['src'][:-6]+'.jpg'
       urllib.urlretrieve(pic_url,pic_save + str(num) + '.jpg')
       print num,
-      num+=1
+      num    += 1
 
 if '__name__' == '__main__':
   spider()
